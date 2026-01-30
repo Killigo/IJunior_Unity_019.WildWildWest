@@ -269,7 +269,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &5611246667845950605
 Transform:
   m_ObjectHideFlags: 0
@@ -507,17 +507,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2070925441746177912, guid: a1a802ecaf6775746bb2a929fb554ad8, type: 3}
   m_PrefabInstance: {fileID: 1580856954876963952}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &670247659025212169 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 2070925441746177913, guid: a1a802ecaf6775746bb2a929fb554ad8, type: 3}
-  m_PrefabInstance: {fileID: 1580856954876963952}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 45e653bab7fb20e499bda25e1b646fea, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &3515378426657685153
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2552,16 +2541,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 083a843da8e5253428978976950c42c2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  aimVirtualCamera: {fileID: 670247659025212169}
-  normalSensitivity: 1
-  aimSensitivity: 0.7
-  aimColliderLayerMask:
+  _aimVirtualCamera: {fileID: 0}
+  _normalSensitivity: 1
+  _aimSensitivity: 0.7
+  _aimColliderLayerMask:
     serializedVersion: 2
-    m_Bits: 1
-  debugTransform: {fileID: 0}
-  bulletProjectile: {fileID: 6497083692454674401, guid: 837fb403cb2bf9243a697f6dbafd3bb5, type: 3}
-  spawnBulletPosition: {fileID: 2762848489904642045}
-  aimRig: {fileID: 7250367852045319590}
+    m_Bits: 0
+  _debugTransform: {fileID: 0}
+  _aimRig: {fileID: 0}
+  _weapon: {fileID: 0}
 --- !u!114 &3172255298779102555
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2579,7 +2567,7 @@ MonoBehaviour:
   drawTripods: 0
   boneSize: 1
   tripodSize: 1
-  boneColor: {r: 0, g: 0, b: 1, a: 0.5}
+  boneColor: {r: 0, g: 1, b: 1, a: 0.5019608}
   m_Transforms:
   - {fileID: 6725500444371674235}
   - {fileID: 5773798281467284585}
@@ -3199,13 +3187,30 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 1902353365401686, guid: 4d5c869ec91d2c44c9a82dbee2a11e7a, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2678800624960827772}
   m_SourcePrefab: {fileID: 100100000, guid: 4d5c869ec91d2c44c9a82dbee2a11e7a, type: 3}
---- !u!4 &2762848489904642045 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 4772456762360078069, guid: 4d5c869ec91d2c44c9a82dbee2a11e7a, type: 3}
+--- !u!1 &7235721223861864798 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1902353365401686, guid: 4d5c869ec91d2c44c9a82dbee2a11e7a, type: 3}
   m_PrefabInstance: {fileID: 7236352438437906696}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &2678800624960827772
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7235721223861864798}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 550a7e3dbaaa09c46aa95737325a9ee1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _bullet: {fileID: 0}
+  _spawnBulletPosition: {fileID: 0}
 --- !u!4 &7240963277070593980 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4962712504198836, guid: 4d5c869ec91d2c44c9a82dbee2a11e7a, type: 3}
